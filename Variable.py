@@ -23,3 +23,13 @@ print(type(flot)) # float
 complexNo = 2j 
 print(type(complexNo)) # complex
 print(complexNo*complexNo)
+
+
+# Naming Rule
+
+myvar = "John"
+my_var = "John"
+_my_var = "John"
+myVar = "John"
+MYVAR = "John"
+myvar2 = "John"
