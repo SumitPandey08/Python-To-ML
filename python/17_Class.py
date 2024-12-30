@@ -29,3 +29,26 @@ forGirl = SayIntro('Saraswati' , '18' , 'female')
 
 print(forBoy)
 print(forGirl)
+
+
+
+# work on super() and child class and Parent class
+
+class Parent:
+    def __init__(self, name, age , blood):
+        self.name = name
+        self.age = age
+        self.blood = "O+" or blood
+
+    def intro(self):
+            return (f"Hello, my name is {self.name} , I am {self.age} and My blood group is {self.blood}")
+
+class Child(Parent):
+    def __init__(self, name, age, blood):
+        super().__init__(name, age, blood)
+
+
+child = Child("Beta" , 18 , ""  )
+print(child.intro())
+
+
