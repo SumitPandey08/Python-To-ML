@@ -44,11 +44,30 @@ class Parent:
             return (f"Hello, my name is {self.name} , I am {self.age} and My blood group is {self.blood}")
 
 class Child(Parent):
-    def __init__(self, name, age, blood):
+    def __init__(self, name, age, blood , sc):
         super().__init__(name, age, blood)
 
 
-child = Child("Beta" , 18 , ""  )
+child = Child("Beta" , 18 , "" , "as" )
 print(child.intro())
 
 
+
+
+class Wordset :
+    def __init__(self):
+        self.words = set()
+
+    def addText(self , text) :
+        text = self.cleanText(text)
+        for word in text.split():
+            self.words.add(word)
+    
+    def cleanText(self , text) :
+        text = text.replace("/", '').replace('!' , "").replace('.', ' ').replace(',', ' ').replace('?', ' ').replace(';', ' ').replace(':', ' ').replace('(', ' ').replace(')', ' ')
+        return text.lower()
+
+
+wordSet = Wordset()
+wordSet.addText("Hello, my name is Satyam. I am a student.")
+print(wordSet.words)
