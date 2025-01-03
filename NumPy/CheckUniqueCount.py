@@ -13,3 +13,5 @@ print(np.unique(arr2 , axis = 0))
 print(np.unique(arr1 , return_index=True )) # return the index of unique values
 
 print(np.unique(arr1 , return_counts=True )) # return the count of unique values
+
+
